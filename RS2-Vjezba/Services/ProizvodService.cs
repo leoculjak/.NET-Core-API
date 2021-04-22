@@ -7,18 +7,39 @@ namespace RS2_Vjezba.Services
 {
     public class ProizvodService : IProizvod
     {
+        // testna lista proizvoda
+        public static List<Proizvod> p = new List<Proizvod>() { new Proizvod { Id = 1, Naziv = "Laptop" }, new Proizvod { Id = 2, Naziv = "Monitor" } };
+
+
         public IEnumerable<Proizvod> Get()
         {
-            // testna lista proizvoda
-            List<Proizvod> p = new List<Proizvod>() { new Proizvod { Id = 1, Naziv = "Laptop" }, new Proizvod { Id = 2, Naziv = "Monitor" } };
-
             return p;
         }
 
-        public class Proizvod
+
+        public Proizvod GetById(int id)
         {
-            public int Id { get; set; }
-            public string Naziv { get; set; }
+            return p.FirstOrDefault(x => x.Id == id);
         }
+
+        public Proizvod Add(Proizvod proizvod)
+        {
+            p.Add(proizvod);
+            return proizvod;
+        }
+
+        public Proizvod Update(int id, Proizvod proizvod)
+        {
+            var tmp = p.FirstOrDefault(x => x.Id == id);
+            tmp.Naziv = proizvod.Naziv;
+
+            return tmp;
+        }
+    }
+
+    public class Proizvod
+    {
+        public int Id { get; set; }
+        public string Naziv { get; set; }
     }
 }

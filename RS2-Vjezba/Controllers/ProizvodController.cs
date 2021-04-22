@@ -20,9 +20,28 @@ namespace RS2_Vjezba.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<ProizvodService.Proizvod> Index()
+        public IEnumerable<Proizvod> Index()
         {
             return _proizvod.Get();
+        }
+
+        [HttpGet("{id}")]
+        public Proizvod GetById(int id)
+        {
+            return _proizvod.GetById(id);
+        }
+
+        [HttpPost]
+        public Proizvod Add(Proizvod p)
+        {
+            //return _proizvod.Add(new Proizvod() { Id = p.Id, Naziv=p.Naziv });
+            return _proizvod.Add(p);
+        }
+
+        [HttpPut("{id}")]
+        public Proizvod Update(int id, Proizvod p)
+        {
+            return _proizvod.Update(id, p);
         }
     }
 }

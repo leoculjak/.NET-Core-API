@@ -7,6 +7,9 @@ namespace RS2_Vjezba.Services
 {
     public interface IProizvod
     {
-        public IEnumerable<ProizvodService.Proizvod> Get();
+        public IEnumerable<Proizvod> Get();
+        public Proizvod GetById(int id);
+        public Proizvod Add(Proizvod proizvod);
+        public Proizvod Update(int id, Proizvod proizvod);
     }
 }
