@@ -11,25 +11,23 @@ namespace eProdaja.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class KorisniciController : ControllerBase
+    public class KorisniciController : BaseController<Model.Korisnici>
     {
-        private readonly IKorisniciService _service;
-
-        public KorisniciController(IKorisniciService service)
+        public KorisniciController(IKorisniciService service) : base(service)
         {
-            _service = service;
+            
         }
 
-        [HttpGet]
-        public IList<Model.Korisnici> Get()
-        {
-            return _service.Get();
-        }
+        //[HttpGet]
+        //public IEnumerable<Model.Korisnici> Get()
+        //{
+        //    return _service.Get();
+        //}
 
-        [HttpPost]
-        public Model.Korisnici Insert([FromBody] KorisniciInsertRequest request)
-        {
-            return _service.Insert(request);
-        }
+        //[HttpPost]
+        //public Model.Korisnici Insert([FromBody] KorisniciInsertRequest request)
+        //{
+        //    return _service.Insert(request);
+        //}
     }
 }

@@ -8,27 +8,12 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class JediniceMjereService : IJediniceMjereService
+    public class JediniceMjereService : BaseReadService<Database.JediniceMjere, Model.JediniceMjere>, IJediniceMjereService
     {
-        public eProdajaContext _context { get; set; }
-        protected readonly IMapper _mapper;
-
         public JediniceMjereService(eProdajaContext context, IMapper mapper)
+            :base(context, mapper)
         {
-            _context = context;
-            _mapper = mapper;
-        }
-
-        public IEnumerable<Model.JediniceMjere> Get()
-        {
-            return _context.JediniceMjeres.ToList().Select(x => _mapper.Map<Model.JediniceMjere>(x)).ToList();
-        }
-
-        public Model.JediniceMjere GetById(int id)
-        {
-            var entity = _context.JediniceMjeres.Find(id);
-
-            return _mapper.Map<Model.JediniceMjere>(entity);
+           
         }
     }
 }

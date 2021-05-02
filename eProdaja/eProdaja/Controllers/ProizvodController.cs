@@ -9,38 +9,36 @@ namespace eProdaja.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProizvodController : ControllerBase
+    public class ProizvodController : BaseController<Proizvod>
     {
-        public IProizvodService _proizvodService { get; set; }
-
-        public ProizvodController(IProizvodService proizvodService)
+        public ProizvodController(IProizvodService proizvodService) : base(proizvodService)
         {
-            _proizvodService = proizvodService;
+            
         }
 
-        [HttpGet]
-        public IEnumerable<Proizvod> Get()
-        {
-            return _proizvodService.Get();
-        }
+        //[HttpGet]
+        //public IEnumerable<Proizvod> Get()
+        //{
+        //    return _proizvodService.Get();
+        //}
 
-        [HttpGet("{id}")]
-        public Proizvod GetById(int id)
-        {
-            return _proizvodService.GetById(id);
-        }
+        //[HttpGet("{id}")]
+        //public Proizvod GetById(int id)
+        //{
+        //    return _proizvodService.GetById(id);
+        //}
 
-        [HttpPost]
-        public Proizvod Insert(Proizvod proizvod)
-        {
-            return _proizvodService.Insert(proizvod);
-        }
+        //[HttpPost]
+        //public Proizvod Insert(Proizvod proizvod)
+        //{
+        //    return _proizvodService.Insert(proizvod);
+        //}
 
-        [HttpPut("{id}")]
-        public Proizvod Update(int id, Proizvod proizvod)
-        {
-            return _proizvodService.Update(id, proizvod);
-        }
+        //[HttpPut("{id}")]
+        //public Proizvod Update(int id, Proizvod proizvod)
+        //{
+        //    return _proizvodService.Update(id, proizvod);
+        //}
     }
 
 

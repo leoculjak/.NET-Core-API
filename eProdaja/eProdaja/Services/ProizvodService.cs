@@ -6,7 +6,7 @@ using eProdaja.Controllers;
 
 namespace eProdaja.Services
 {
-    public class ProizvodService : IProizvodService
+    public class ProizvodService :  IProizvodService
     {
         private static List<Proizvod> _proizvodi;
 

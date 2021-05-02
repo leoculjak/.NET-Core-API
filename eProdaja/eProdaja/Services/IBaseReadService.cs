@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IJediniceMjereService : IBaseReadService<Model.JediniceMjere>
+    public interface IBaseReadService<T> where T: class
     {
-
+        IEnumerable<T> Get();
+        public T GetById(int id);
     }
 }

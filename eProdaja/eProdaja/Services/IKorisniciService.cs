@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IKorisniciService
+    public interface IKorisniciService : IBaseReadService<Model.Korisnici>
     {
-        List<Model.Korisnici> Get();
-
-        Model.Korisnici Insert(KorisniciInsertRequest request);
+        
     }
 }

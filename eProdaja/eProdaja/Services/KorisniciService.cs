@@ -9,27 +9,18 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class KorisniciService : IKorisniciService
+    public class KorisniciService : BaseReadService<Database.Korisnici, Model.Korisnici>, IKorisniciService
     {
-        public eProdajaContext Context { get; set; }
-        protected readonly IMapper _mapper;
-
-        public KorisniciService(eProdajaContext context, IMapper mapper)
+        public KorisniciService(eProdajaContext context, IMapper mapper) : base(context, mapper)
         {
-            Context = context;
-            _mapper = mapper;
+            
         }
 
-        public List<Model.Korisnici> Get()
-        {
-            return Context.Korisnicis.ToList().Select(x => _mapper.Map<Model.Korisnici>(x)).ToList();
-        }
-
-        public Model.Korisnici Insert(KorisniciInsertRequest request)
-        {
-            //throw new NotImplementedException();
-            throw new UserException("Lozinka nije ispravna");
-        }
+        //public Model.Korisnici Insert(KorisniciInsertRequest request)
+        //{
+        //    //throw new NotImplementedException();
+        //    throw new UserException("Lozinka nije ispravna");
+        //}
 
         //GetById
 
