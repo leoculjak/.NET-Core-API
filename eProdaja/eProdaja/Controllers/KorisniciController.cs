@@ -11,7 +11,7 @@ namespace eProdaja.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class KorisniciController : BaseController<Model.Korisnici>
+    public class KorisniciController : BaseController<Model.Korisnici, object>
     {
         public KorisniciController(IKorisniciService service) : base(service)
         {

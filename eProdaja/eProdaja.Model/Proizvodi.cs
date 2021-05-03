@@ -17,7 +17,7 @@ namespace eProdaja.Model
         public bool? Status { get; set; }
 
         public virtual JediniceMjere JedinicaMjere { get; set; }
-        //public virtual VrsteProizvodum Vrsta { get; set; }
+        public virtual VrsteProizvodum Vrsta { get; set; }
         //public virtual ICollection<IzlazStavke> IzlazStavkes { get; set; }
         //public virtual ICollection<NarudzbaStavke> NarudzbaStavkes { get; set; }
         //public virtual ICollection<Ocjene> Ocjenes { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IKorisniciService : IBaseReadService<Model.Korisnici>
+    public interface IKorisniciService : IBaseReadService<Model.Korisnici, object>
     {
         
     }

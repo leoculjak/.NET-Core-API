@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class JediniceMjereService : BaseReadService<Database.JediniceMjere, Model.JediniceMjere>, IJediniceMjereService
+    public class JediniceMjereService : BaseReadService<Database.JediniceMjere, Model.JediniceMjere, object>, IJediniceMjereService
     {
         public JediniceMjereService(eProdajaContext context, IMapper mapper)
             :base(context, mapper)

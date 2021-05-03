@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class BaseReadService<Tdb, T> : IBaseReadService<T> where T: class where Tdb: class
+    public class BaseReadService<Tdb, T, TSearch> : IBaseReadService<T, TSearch> where T: class where Tdb: class where TSearch: class
     {
         public eProdajaContext _context { get; set; }
         protected readonly IMapper _mapper;
@@ -18,7 +18,7 @@ namespace eProdaja.Services
             _mapper = mapper;
         }
 
-        public IEnumerable<T> Get()
+        public virtual IEnumerable<T> Get(TSearch search = null)
         {
             var entity = _context.Set<Tdb>();
 

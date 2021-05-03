@@ -6,7 +6,7 @@ using eProdaja.Controllers;
 
 namespace eProdaja.Services
 {
-    public interface IProizvodService : IBaseReadService<Proizvod>
+    public interface IProizvodService : IBaseReadService<Proizvod, object>
     {
         
     }

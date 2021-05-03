@@ -9,7 +9,7 @@ namespace eProdaja.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProizvodiController : BaseController<Model.Proizvodi>
+    public class ProizvodiController : BaseController<Model.Proizvodi, Model.ProizvodiSearchObject>
     {
         public ProizvodiController(IProizvodiService proizvodiService) : base(proizvodiService)
         {

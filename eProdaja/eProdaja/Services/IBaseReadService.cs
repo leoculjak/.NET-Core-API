@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IBaseReadService<T> where T: class
+    public interface IBaseReadService<T, TSearch> where T: class where TSearch: class
     {
-        IEnumerable<T> Get();
+        IEnumerable<T> Get(TSearch search = null);
         public T GetById(int id);
     }
 }

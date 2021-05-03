@@ -51,5 +51,15 @@ namespace eProdaja.Services
 
             return current;
         }
+
+        IEnumerable<Proizvod> IBaseReadService<Proizvod, object>.Get(object search)
+        {
+            throw new NotImplementedException();
+        }
+
+        Proizvod IBaseReadService<Proizvod, object>.GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

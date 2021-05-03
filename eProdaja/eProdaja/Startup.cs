@@ -45,6 +45,7 @@ namespace eProdaja
             services.AddScoped<IKorisniciService, KorisniciService>();
             services.AddScoped<IJediniceMjereService, JediniceMjereService>();
             services.AddScoped<IProizvodiService, ProizvodiService>();
+            services.AddScoped<IVrstaProizvodaService, VrstaProizvodaService>();
             //ICIPSService -
             //CIPSService
             //DummyCIPSService

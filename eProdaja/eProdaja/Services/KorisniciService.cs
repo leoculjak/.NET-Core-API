@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class KorisniciService : BaseReadService<Database.Korisnici, Model.Korisnici>, IKorisniciService
+    public class KorisniciService : BaseReadService<Database.Korisnici, Model.Korisnici, object>, IKorisniciService
     {
         public KorisniciService(eProdajaContext context, IMapper mapper) : base(context, mapper)
         {
