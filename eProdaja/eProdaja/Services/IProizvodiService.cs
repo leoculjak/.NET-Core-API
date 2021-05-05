@@ -6,7 +6,7 @@ using eProdaja.Controllers;
 
 namespace eProdaja.Services
 {
-    public interface IProizvodiService : IBaseReadService<Model.Proizvodi, Model.ProizvodiSearchObject>
+    public interface IProizvodiService : ICRUDService<Model.Proizvodi, Model.ProizvodiSearchObject, Model.Requests.ProizvodiInsertRequest, Model.Requests.ProizvodiUpdateRequest>
     {
         
     }

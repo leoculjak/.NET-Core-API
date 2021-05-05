@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eProdaja.Services
 {
-    public class ProizvodiService : BaseReadService<Database.Proizvodi, Model.Proizvodi, Model.ProizvodiSearchObject>, IProizvodiService
+    public class ProizvodiService : CRUDService<Database.Proizvodi, Model.Proizvodi, Model.ProizvodiSearchObject, Model.Requests.ProizvodiInsertRequest, Model.Requests.ProizvodiUpdateRequest>, IProizvodiService
     {
         public ProizvodiService(eProdajaContext context, IMapper mapper) : base(context, mapper)
         {
