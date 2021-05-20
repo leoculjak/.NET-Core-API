@@ -18,6 +18,9 @@ namespace eProdaja.Model
 
         public virtual JediniceMjere JedinicaMjere { get; set; }
         public virtual VrsteProizvodum Vrsta { get; set; }
+
+        public string VrstaNaziv => Vrsta?.Naziv;
+        public string JedinicaNaziv => JedinicaMjere?.Naziv;
         //public virtual ICollection<IzlazStavke> IzlazStavkes { get; set; }
         //public virtual ICollection<NarudzbaStavke> NarudzbaStavkes { get; set; }
         //public virtual ICollection<Ocjene> Ocjenes { get; set; }

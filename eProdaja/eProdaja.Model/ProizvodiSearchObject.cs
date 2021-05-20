@@ -10,6 +10,6 @@ namespace eProdaja.Model
         public int? VrstaId { get; set; }
         public int? JedinicaMjereId { get; set; }
 
-        public List<string> Connections { get; set; }
+        public List<string> Connections { get; set; } = new List<string>();
     }
 }
